@@ -9,8 +9,9 @@ import java.util.Map;
  */
 public class DiminishingColoredBalls {
 
+    // Gets the Arithemtic Progressive some from x+1 --> n
     private static long sumFromNtoX(long n, long x){
-        return ((n*(n+1))/2 - (x *(x+1))/2);
+        return (((n-x) * (n+x+1))/2);
     }
 
     public static int maxProfit(int[] inventory, int orders) {
