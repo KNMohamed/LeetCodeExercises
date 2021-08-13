@@ -34,6 +34,8 @@ public class AddTwoLinkedLists {
         if(sum.compareTo(BigDecimal.ZERO) == 0) {
             return new ListNode(0);
         }
+
+        //Convert sum to linked list
         int length = (int)Math.log10(sum.doubleValue()) + 1;        // Get number of digits
         ListNode res = null;
         while(length > 0){
