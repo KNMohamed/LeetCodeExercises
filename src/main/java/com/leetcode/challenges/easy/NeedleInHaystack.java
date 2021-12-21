@@ -55,7 +55,7 @@ public class NeedleInHaystack {
 
     public static void main(String[] args) {
         NeedleInHaystack nih = new NeedleInHaystack();
-        int idx = nih.strStr("abcdabca","dab");
+        int idx = nih.strStr("ababaaba","dab");
         System.out.println(idx);
     }
 }
