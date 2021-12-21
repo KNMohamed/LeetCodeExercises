@@ -8,20 +8,18 @@ import java.util.Arrays;
  */
 public class RemoveElement {
     public int removeElement(int[] nums, int val) {
-        int i = 0, j = nums.length-1;
-        while(j >= i){
-            if(nums[i] == val){
-                if(nums[j] != val) {
-                    nums[i++] = nums[j];
-                    nums[j] = val;
-                }else {
-                    j--;
-                }
-            } else{
+        int i = 0;
+        int n = nums.length;
+        while (i < n) {
+            if (nums[i] == val) {
+                nums[i] = nums[n - 1];
+                // reduce array size by one
+                n--;
+            } else {
                 i++;
             }
         }
-        return i;
+        return n;
     }
 
     public static void main(String[] args) {
