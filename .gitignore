@@ -14,11 +14,12 @@ LeetCodeExercises.iml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
-
+.idea/codeStyles/
 # AWS User-specific
 .idea/**/aws.xml
 
 # Generated files
+.idea/codeStyles/
 .idea/**/contentModel.xml
 
 # Sensitive or high-churn files
