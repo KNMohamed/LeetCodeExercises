@@ -5,22 +5,28 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ReverseArrayRecursive {
-    public static List<Integer> reverseArrayRecursive(int[] array){
-        if(array.length == 0) return new ArrayList<>();
-        return reverseArrayRecursive(array, new ArrayList<>(), array.length-1);
+    public static void reverseArrayRecursive(int[] array){
+        if(array.length > 1) {
+            reverseArrayRecursive(array,0,array.length - 1);
+        }
     }
 
-    private static List<Integer> reverseArrayRecursive(int[] array, List<Integer> reversedArray, int index) {
-        reversedArray.add(array[index]);
-        if(index == 0){
-            return reversedArray;
+    private static void reverseArrayRecursive(int[] array, int start, int end) {
+        if(start < end){
+            swap(array,start,end);
+            reverseArrayRecursive(array,start+1,end-1);
         }
-        return reverseArrayRecursive(array,reversedArray,index-1);
+    }
+
+    private static void swap(int[] array, int i, int j){
+        int temp = array[j];
+        array[j] = array[i];
+        array[i] = temp;
     }
 
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5,6};
-        int[] reversedArray = reverseArrayRecursive(array).stream().mapToInt(Integer::intValue).toArray();
-        Arrays.stream(reversedArray).forEach(System.out::println);
+        reverseArrayRecursive(array);
+        Arrays.stream(array).forEach(System.out::println);
     }
 }
