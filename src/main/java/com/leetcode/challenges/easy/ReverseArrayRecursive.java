@@ -1,8 +1,6 @@
 package com.leetcode.challenges.easy;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class ReverseArrayRecursive {
     public static void reverseArrayRecursive(int[] array){
